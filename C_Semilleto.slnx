@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="C_Semilleto/C_Semilleto.csproj" />
+  <Project Path="C_Semillero_2/C_Semillero_2.csproj" Id="2b022bdd-4967-42fe-ad5d-cd2ff8f0da5a" />
+  <Project Path="C_Semilleto/C_Semillero.csproj" />
 </Solution>
