@@ -1,21 +1,17 @@
 ﻿using System;
 
-namespace C_Semillero_2
+//Programa que pide al el usuario una cantidad en metros y lo convierte en millas
+//JesusG
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            int a, b;
+        int m;
 
-            Console.WriteLine("Ingrese el primer número:");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ingresa el segundo número");
-            b = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingrese la cantidad de metros: ");
+        m = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("El resultado de división entera es: " + (a / b));
-            Console.WriteLine(" y su residuo es: " + (a % b));  
+        Console.WriteLine(m + " metros en millas es : " + (m / 1609.34)); 
 
-        }
     }
 }
