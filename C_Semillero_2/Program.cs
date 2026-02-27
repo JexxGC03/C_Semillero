@@ -5,15 +5,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        int a, b, cantidadDePsitivos;
-        Console.Write("Ingresa un número cualquiera: ");
-        a = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Ingresa un segundo número: ");
-        b = Convert.ToInt32(Console.ReadLine());
+        int a = 0;
 
-        cantidadDePsitivos = (a >= 0 && b >= 0) ? 2 : ((a < 0 && b < 0) ? 0 : 1);
-        Console.WriteLine("La catidad de positivos escritos es: {0}", cantidadDePsitivos);
+        while (a != 1234)
+        {
+            Console.Write("Digite la contraseña: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            if (a != 1234 ) 
+                Console.WriteLine("Contraseña Incorrecta");
+        }
 
-
+        Console.WriteLine("Bienvenido");
     }
 }
