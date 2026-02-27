@@ -6,12 +6,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        int m;
+        int num;
 
-        Console.Write("Ingrese la cantidad de metros: ");
-        m = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingrese el número para imprimir la tabla de multiplicar: ");
+        num = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine(m + " metros en millas es : " + (m / 1609.34)); 
-
+        Console.WriteLine("{0} X 1 = {1}", num, num * 1);
+        Console.WriteLine("{0} X 2 = {1}", num, num * 2);
+        Console.WriteLine("{0} X 3 = {1}", num, num * 3);
+        Console.WriteLine("{0} X 4 = {1}", num, num * 4);
+        Console.WriteLine("{0} X 5 = {1}", num, num * 5);
+        Console.WriteLine("{0} X 6 = {1}", num, num * 6);
+        Console.WriteLine("{0} X 7 = {1}", num, num * 7);
+        Console.WriteLine("{0} X 8 = {1}", num, num * 8);
+        Console.WriteLine("{0} X 9 = {1}", num, num * 9);
+        Console.WriteLine("{0} X 10 = {1}", num, num * 10);
     }
 }
