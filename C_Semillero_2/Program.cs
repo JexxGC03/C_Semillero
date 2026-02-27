@@ -5,21 +5,37 @@ class Program
 {
     static void Main(string[] args)
     {
-        int a, b, c;
-
-        Console.WriteLine("Ingresa los siguientes números para comparar");
-        Console.Write("Ingresa el primer número: ");
+        int a;
+        Console.Write("Ingresa un número de la semana: ");
         a = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Ingresa el segundo número: ");
-        b = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Ingresa el tercer número: ");
-        c = Convert.ToInt32(Console.ReadLine());
 
-        if (a > b && a > c)
-            Console.WriteLine("El mayor es {0}", a);
-        else if (b > c)
-            Console.WriteLine("El mayor es {0}", b);
-        else 
-            Console.WriteLine("El mayor es {0}", c);
+        switch (a) {
+            case 1:
+                Console.WriteLine("Lunes");
+                break;
+            case 2:
+                Console.WriteLine("Martes");
+                break;
+            case 3:
+                Console.WriteLine("Miércoles");
+                break;
+            case 4:
+                Console.WriteLine("Jueves");
+                break;
+            case 5:
+                Console.WriteLine("Viernes");
+                break;
+            case 6:
+                Console.WriteLine("Sábado");
+                break;
+            case 7:
+                Console.WriteLine("Domingo");
+                break;
+            default:
+                Console.WriteLine("No existe un número de la semana con ese valor");
+                break;
+        }
+
+        
     }
 }
