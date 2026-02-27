@@ -1,25 +1,21 @@
 ﻿using System;
 
-//Programa que pide al el usuario una cantidad en metros y lo convierte en millas
 //JesusG
 class Program
 {
     static void Main(string[] args)
     {
-        int num;
+        int a, b;
 
-        Console.Write("Ingrese el número para imprimir la tabla de multiplicar: ");
-        num = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingresa dos númeror para comparar");
+        Console.Write("Ingresa el primer número: ");
+        a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Ingresa el segundo número: ");
+        b = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("{0} X 1 = {1}", num, num * 1);
-        Console.WriteLine("{0} X 2 = {1}", num, num * 2);
-        Console.WriteLine("{0} X 3 = {1}", num, num * 3);
-        Console.WriteLine("{0} X 4 = {1}", num, num * 4);
-        Console.WriteLine("{0} X 5 = {1}", num, num * 5);
-        Console.WriteLine("{0} X 6 = {1}", num, num * 6);
-        Console.WriteLine("{0} X 7 = {1}", num, num * 7);
-        Console.WriteLine("{0} X 8 = {1}", num, num * 8);
-        Console.WriteLine("{0} X 9 = {1}", num, num * 9);
-        Console.WriteLine("{0} X 10 = {1}", num, num * 10);
+        if (a >= b)
+            Console.WriteLine("El mayor es {0}", a);
+        else
+            Console.WriteLine("El mayor es {0}", b);
     }
 }
