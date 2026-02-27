@@ -5,17 +5,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Número de 1 a 20
+        // Número del 1 al 20, saltando el 10
+        for (int i = 0; i <= 20; i++) 
+        { 
+            if (i == 10)
+                continue;
+            Console.WriteLine(i);
+        }
+
+        // Número del 1 al 20, saltando el 10
         for (int i = 0; i <= 20; i++)
+        {
+            if (i == 10)
+                break;
             Console.WriteLine(i);
-
-        //Número pares entre 2 y 16
-        for (int i = 2; i <=16; i = i+ 2)
-            Console.WriteLine(i);
-
-        //Número impares entre 15 y 5, descendido
-        for (int i = 15; i >= 5; i = i - 2)
-            Console.WriteLine(i);
-
+        }
     }
 }
