@@ -5,17 +5,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        int a = 0;
+        // Número de 1 a 20
+        for (int i = 0; i <= 20; i++)
+            Console.WriteLine(i);
 
-        do
-        {
-            Console.Write("Digite la contraseña: ");
-            a = Convert.ToInt32(Console.ReadLine());
-            if (a != 1234)
-                Console.WriteLine("Contraseña Incorrecta");
-        }
-        while (a != 1234);
+        //Número pares entre 2 y 16
+        for (int i = 2; i <=16; i = i+ 2)
+            Console.WriteLine(i);
 
-        Console.WriteLine("Bienvenido");
+        //Número impares entre 15 y 5, descendido
+        for (int i = 15; i >= 5; i = i - 2)
+            Console.WriteLine(i);
+
     }
 }
