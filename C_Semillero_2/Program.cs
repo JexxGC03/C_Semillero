@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Timers;
 
 //JesusG
 class Program
@@ -6,23 +7,38 @@ class Program
     static void Main(string[] args)
     {
         //Juego para adivinar número con intentos maximos
-        const int MAX_ATTEMPS = 5;
-        const int CORRECT_NUMBER = 17;
+        Console.WriteLine("Digite un número: ");
+        var a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ahora digite un operador: ");
+        var signo = Console.ReadLine();
+        Console.WriteLine("Digite un número: ");
+        var b = Convert.ToInt32(Console.ReadLine());
+        var resultado = 0;
+        var operardorValido = true;
 
-        int num, attemps = MAX_ATTEMPS;
-        bool foundNumber = false;
-
-        do
-        {
-            Console.WriteLine("Adivina el número, introduce el numero: ");
-            num = Convert.ToInt32(Console.ReadLine());
-
-            if (num == CORRECT_NUMBER)
-                foundNumber = true;
-
-            attemps--;
+        switch (signo){
+            case "+":
+                resultado = a + b;
+                break;
+            case "-":
+                resultado = a - b;
+                break;
+            case "*":
+                resultado = a * b;
+                break;
+            case "/":
+                resultado = a / b;
+                break;
+            default:
+                Console.WriteLine("Operador incorrecto.");
+                operardorValido = false;
+                break;
         }
-        while (!foundNumber && attemps > 0);
+
+        if (operardorValido)
+            Console.WriteLine("El resultado de su operación es: {0} {1} {2} = {3}", a, signo, b, resultado);
+        else
+            Console.WriteLine("...");
     }
 
 }
