@@ -5,38 +5,24 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Juego para adivinar número con intentos maximos
+        const int MAX_ATTEMPS = 5;
+        const int CORRECT_NUMBER = 17;
 
-        //Mini traductor de C# a Java
-        Console.WriteLine("Introduce una instrucción de C# (if, while, for, Console.WriteLine):");
-        Console.Write("> ");
+        int num, attemps = MAX_ATTEMPS;
+        bool foundNumber = false;
 
-        string entrada = Console.ReadLine().Trim();
-
-        switch (entrada)
+        do
         {
-            case "if":
-                Console.WriteLine("Equivalencia en Java: if (condición) { ... }");
-                break;
+            Console.WriteLine("Adivina el número, introduce el numero: ");
+            num = Convert.ToInt32(Console.ReadLine());
 
-            case "while":
-                Console.WriteLine("Equivalencia en Java: while (condición) { ... }");
-                break;
+            if (num == CORRECT_NUMBER)
+                foundNumber = true;
 
-            case "for":
-                Console.WriteLine("Equivalencia en Java: for (int i=0; i<n; i++) { ... }");
-                break;
-
-            case "Console.WriteLine":
-                Console.WriteLine("Equivalencia en Java: System.out.println();");
-                break;
-
-            default:
-                Console.WriteLine(" Error: Orden no reconocida o no soportada actualmente.");
-                break;
+            attemps--;
         }
-
-        Console.WriteLine("\nPresiona cualquier tecla para salir...");
-        Console.ReadKey();
+        while (!foundNumber && attemps > 0);
     }
 
 }
