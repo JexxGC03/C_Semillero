@@ -5,19 +5,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        ushort year;
-        byte age;
-        uint poblation;
 
-        Console.Write("Digite su año de nacimiento: ");
-        year = Convert.ToUInt16(Console.ReadLine());
-        Console.Write("Digite su edad: ");
-        age = Convert.ToByte(Console.ReadLine());
-        Console.Write("Digite cuantos habitantes tiene su pueblo: ");
-        poblation = Convert.ToUInt32(Console.ReadLine());
+        //Saca la superficie de un circulo con 2 decimales
+        double pi = 3.141596;
+        double radio, superficie;
 
-        Console.WriteLine("Su año de nacimiento es {0}, su edad es {1} y su pueblo tiene {2} cantidad de habitantes",
-            year, age, poblation);
+        Console.Write("Digite el radio de un circulo para calcular la superficie: ");
+        radio = Convert.ToDouble(Console.ReadLine());
+        superficie = (pi * (radio*radio));
+        Console.WriteLine("La suoerficie de un circulo con radio {0} es: {1}",
+            radio, superficie.ToString("0.00"));
+
+
+        //Pide un número y lo convierte a Hexa y Binario
+        int num;
+        do
+        {
+            int a, b;
+            Console.Write("Digita un número: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Tu número en hexadecimal es: {0} y en binario es: {1} ",
+                Convert.ToString(num, 16),
+                Convert.ToString(num, 2));
+        }
+        while (num != 0);
+
 
     }
 }
